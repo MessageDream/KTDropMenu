@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2EA19E41B5933F40027F211 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA19E31B5933F40027F211 /* main.m */; };
+		B2EA19E71B5933F40027F211 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA19E61B5933F40027F211 /* AppDelegate.m */; };
+		B2EA19EA1B5933F40027F211 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA19E91B5933F40027F211 /* ViewController.m */; };
+		B2EA19ED1B5933F40027F211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EA19EB1B5933F40027F211 /* Main.storyboard */; };
+		B2EA19EF1B5933F40027F211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EA19EE1B5933F40027F211 /* Assets.xcassets */; };
+		B2EA19F21B5933F40027F211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EA19F01B5933F40027F211 /* LaunchScreen.storyboard */; };
+		B2EA19FD1B5933F40027F211 /* KTDropMenuSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA19FC1B5933F40027F211 /* KTDropMenuSampleTests.m */; };
+		B2EA1A081B5933F40027F211 /* KTDropMenuSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA1A071B5933F40027F211 /* KTDropMenuSampleUITests.m */; };
+		B2EA1A181B59341A0027F211 /* KTDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EA1A171B59341A0027F211 /* KTDropMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2EA19F91B5933F40027F211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2EA19D71B5933F40027F211 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2EA19DE1B5933F40027F211;
+			remoteInfo = KTDropMenuSample;
+		};
+		B2EA1A041B5933F40027F211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2EA19D71B5933F40027F211 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2EA19DE1B5933F40027F211;
+			remoteInfo = KTDropMenuSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2EA19DF1B5933F40027F211 /* KTDropMenuSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTDropMenuSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EA19E31B5933F40027F211 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2EA19E51B5933F40027F211 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B2EA19E61B5933F40027F211 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2EA19E81B5933F40027F211 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B2EA19E91B5933F40027F211 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B2EA19EC1B5933F40027F211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2EA19EE1B5933F40027F211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2EA19F11B5933F40027F211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2EA19F31B5933F40027F211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EA19F81B5933F40027F211 /* KTDropMenuSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTDropMenuSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EA19FC1B5933F40027F211 /* KTDropMenuSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTDropMenuSampleTests.m; sourceTree = "<group>"; };
+		B2EA19FE1B5933F40027F211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EA1A031B5933F40027F211 /* KTDropMenuSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTDropMenuSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EA1A071B5933F40027F211 /* KTDropMenuSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTDropMenuSampleUITests.m; sourceTree = "<group>"; };
+		B2EA1A091B5933F40027F211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EA1A161B59341A0027F211 /* KTDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTDropMenu.h; path = ../KTDropMenu.h; sourceTree = "<group>"; };
+		B2EA1A171B59341A0027F211 /* KTDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTDropMenu.m; path = ../KTDropMenu.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2EA19DC1B5933F40027F211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA19F51B5933F40027F211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA1A001B5933F40027F211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2EA19D61B5933F40027F211 = {
+			isa = PBXGroup;
+			children = (
+				B2EA1A151B5934050027F211 /* classes */,
+				B2EA19E11B5933F40027F211 /* KTDropMenuSample */,
+				B2EA19FB1B5933F40027F211 /* KTDropMenuSampleTests */,
+				B2EA1A061B5933F40027F211 /* KTDropMenuSampleUITests */,
+				B2EA19E01B5933F40027F211 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2EA19E01B5933F40027F211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA19DF1B5933F40027F211 /* KTDropMenuSample.app */,
+				B2EA19F81B5933F40027F211 /* KTDropMenuSampleTests.xctest */,
+				B2EA1A031B5933F40027F211 /* KTDropMenuSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2EA19E11B5933F40027F211 /* KTDropMenuSample */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA19E51B5933F40027F211 /* AppDelegate.h */,
+				B2EA19E61B5933F40027F211 /* AppDelegate.m */,
+				B2EA19E81B5933F40027F211 /* ViewController.h */,
+				B2EA19E91B5933F40027F211 /* ViewController.m */,
+				B2EA19EB1B5933F40027F211 /* Main.storyboard */,
+				B2EA19EE1B5933F40027F211 /* Assets.xcassets */,
+				B2EA19F01B5933F40027F211 /* LaunchScreen.storyboard */,
+				B2EA19F31B5933F40027F211 /* Info.plist */,
+				B2EA19E21B5933F40027F211 /* Supporting Files */,
+			);
+			path = KTDropMenuSample;
+			sourceTree = "<group>";
+		};
+		B2EA19E21B5933F40027F211 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA19E31B5933F40027F211 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2EA19FB1B5933F40027F211 /* KTDropMenuSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA19FC1B5933F40027F211 /* KTDropMenuSampleTests.m */,
+				B2EA19FE1B5933F40027F211 /* Info.plist */,
+			);
+			path = KTDropMenuSampleTests;
+			sourceTree = "<group>";
+		};
+		B2EA1A061B5933F40027F211 /* KTDropMenuSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA1A071B5933F40027F211 /* KTDropMenuSampleUITests.m */,
+				B2EA1A091B5933F40027F211 /* Info.plist */,
+			);
+			path = KTDropMenuSampleUITests;
+			sourceTree = "<group>";
+		};
+		B2EA1A151B5934050027F211 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA1A161B59341A0027F211 /* KTDropMenu.h */,
+				B2EA1A171B59341A0027F211 /* KTDropMenu.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2EA19DE1B5933F40027F211 /* KTDropMenuSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EA1A0C1B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSample" */;
+			buildPhases = (
+				B2EA19DB1B5933F40027F211 /* Sources */,
+				B2EA19DC1B5933F40027F211 /* Frameworks */,
+				B2EA19DD1B5933F40027F211 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTDropMenuSample;
+			productName = KTDropMenuSample;
+			productReference = B2EA19DF1B5933F40027F211 /* KTDropMenuSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2EA19F71B5933F40027F211 /* KTDropMenuSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EA1A0F1B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSampleTests" */;
+			buildPhases = (
+				B2EA19F41B5933F40027F211 /* Sources */,
+				B2EA19F51B5933F40027F211 /* Frameworks */,
+				B2EA19F61B5933F40027F211 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2EA19FA1B5933F40027F211 /* PBXTargetDependency */,
+			);
+			name = KTDropMenuSampleTests;
+			productName = KTDropMenuSampleTests;
+			productReference = B2EA19F81B5933F40027F211 /* KTDropMenuSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2EA1A021B5933F40027F211 /* KTDropMenuSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EA1A121B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSampleUITests" */;
+			buildPhases = (
+				B2EA19FF1B5933F40027F211 /* Sources */,
+				B2EA1A001B5933F40027F211 /* Frameworks */,
+				B2EA1A011B5933F40027F211 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2EA1A051B5933F40027F211 /* PBXTargetDependency */,
+			);
+			name = KTDropMenuSampleUITests;
+			productName = KTDropMenuSampleUITests;
+			productReference = B2EA1A031B5933F40027F211 /* KTDropMenuSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2EA19D71B5933F40027F211 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = jayden;
+				TargetAttributes = {
+					B2EA19DE1B5933F40027F211 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B2EA19F71B5933F40027F211 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B2EA19DE1B5933F40027F211;
+					};
+					B2EA1A021B5933F40027F211 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B2EA19DE1B5933F40027F211;
+					};
+				};
+			};
+			buildConfigurationList = B2EA19DA1B5933F40027F211 /* Build configuration list for PBXProject "KTDropMenuSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2EA19D61B5933F40027F211;
+			productRefGroup = B2EA19E01B5933F40027F211 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2EA19DE1B5933F40027F211 /* KTDropMenuSample */,
+				B2EA19F71B5933F40027F211 /* KTDropMenuSampleTests */,
+				B2EA1A021B5933F40027F211 /* KTDropMenuSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2EA19DD1B5933F40027F211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EA19F21B5933F40027F211 /* LaunchScreen.storyboard in Resources */,
+				B2EA19EF1B5933F40027F211 /* Assets.xcassets in Resources */,
+				B2EA19ED1B5933F40027F211 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA19F61B5933F40027F211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA1A011B5933F40027F211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2EA19DB1B5933F40027F211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EA1A181B59341A0027F211 /* KTDropMenu.m in Sources */,
+				B2EA19EA1B5933F40027F211 /* ViewController.m in Sources */,
+				B2EA19E71B5933F40027F211 /* AppDelegate.m in Sources */,
+				B2EA19E41B5933F40027F211 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA19F41B5933F40027F211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EA19FD1B5933F40027F211 /* KTDropMenuSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA19FF1B5933F40027F211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EA1A081B5933F40027F211 /* KTDropMenuSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2EA19FA1B5933F40027F211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2EA19DE1B5933F40027F211 /* KTDropMenuSample */;
+			targetProxy = B2EA19F91B5933F40027F211 /* PBXContainerItemProxy */;
+		};
+		B2EA1A051B5933F40027F211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2EA19DE1B5933F40027F211 /* KTDropMenuSample */;
+			targetProxy = B2EA1A041B5933F40027F211 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2EA19EB1B5933F40027F211 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2EA19EC1B5933F40027F211 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2EA19F01B5933F40027F211 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2EA19F11B5933F40027F211 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2EA1A0A1B5933F40027F211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2EA1A0B1B5933F40027F211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2EA1A0D1B5933F40027F211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KTDropMenuSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2EA1A0E1B5933F40027F211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KTDropMenuSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B2EA1A101B5933F40027F211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KTDropMenuSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTDropMenuSample.app/KTDropMenuSample";
+			};
+			name = Debug;
+		};
+		B2EA1A111B5933F40027F211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KTDropMenuSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KTDropMenuSample.app/KTDropMenuSample";
+			};
+			name = Release;
+		};
+		B2EA1A131B5933F40027F211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KTDropMenuSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KTDropMenuSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B2EA1A141B5933F40027F211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KTDropMenuSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxuxiao.dropdown.KTDropMenuSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KTDropMenuSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2EA19DA1B5933F40027F211 /* Build configuration list for PBXProject "KTDropMenuSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EA1A0A1B5933F40027F211 /* Debug */,
+				B2EA1A0B1B5933F40027F211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2EA1A0C1B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EA1A0D1B5933F40027F211 /* Debug */,
+				B2EA1A0E1B5933F40027F211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2EA1A0F1B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EA1A101B5933F40027F211 /* Debug */,
+				B2EA1A111B5933F40027F211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2EA1A121B5933F40027F211 /* Build configuration list for PBXNativeTarget "KTDropMenuSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EA1A131B5933F40027F211 /* Debug */,
+				B2EA1A141B5933F40027F211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2EA19D71B5933F40027F211 /* Project object */;
+}

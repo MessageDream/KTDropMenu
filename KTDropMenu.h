@@ -16,32 +16,57 @@
 
 @property (readwrite, nonatomic, strong) UIImage *image;
 @property (readwrite, nonatomic, strong) NSString *title;
-@property (readwrite, nonatomic, weak) id target;
-@property (readwrite, nonatomic) SEL action;
-@property (readwrite, nonatomic) NSInteger tag;
+@property (readwrite, nonatomic) id tag;
+@property (readwrite, nonatomic) BOOL isSelected;
 
 @property (readwrite, nonatomic, strong) UIColor *foreColor;
 @property (readwrite, nonatomic) NSTextAlignment alignment;
 
 + (instancetype) menuItem:(NSString *) title
                     image:(UIImage *) image
-                   target:(id)target
-                   action:(SEL) action  tag:(NSInteger)tag;
+                     tag:(id)tag;
 
 @end
 
+@protocol KTDropMenuDelegate <NSObject>
+-(void)ktDropMenuItemSelected:(KTDropMenuItem *)item index:(NSInteger)index;
+@end
 @interface KTDropMenu : NSObject
 
 + (void) showMenuInView:(UIView *)view
                fromRect:(CGRect)rect
+               delegate:(id<KTDropMenuDelegate>)delegate
+              menuItems:(NSArray *)menuItems;
+
++ (void) showMenuInView:(UIView *)view
+               fromView:(UIView *)fromView
+               delegate:(id<KTDropMenuDelegate>)delegate
               menuItems:(NSArray *)menuItems;
 
 + (void) dismissMenu;
+
++ (UIColor *) selectedColor;
++ (void) setSelectedColor: (UIColor *) selectedColor;
 
 + (UIColor *) tintColor;
 + (void) setTintColor: (UIColor *) tintColor;
 
 + (UIFont *) titleFont;
 + (void) setTitleFont: (UIFont *) titleFont;
+
++ (UIColor *) splitLineColor;
++ (void)setSplitLineColor:(UIColor *)splitLineColor;
+
++ (NSInteger) maxDisplayCount;
++ (void)setMaxDisplayCount:(NSInteger)maxDisplayCount;
+
++ (CGFloat) margin;
++ (void)setMargin:(CGFloat)margin;
+
++ (CGFloat) arrowSize;
++ (void)setArrowSize:(CGFloat)arrowSize;
+
++ (CGFloat) cornerRadius;
++ (void) setCornerRadius:(CGFloat)cornerRadius;
 
 @end
