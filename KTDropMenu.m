@@ -56,9 +56,9 @@
 
 + (instancetype) menuItem:(NSString *) title
                     image:(UIImage *) image
-                   tag:(id)tag{
+                      tag:(id)tag{
     return [[KTDropMenuItem alloc] init:title
-                              image:image tag:tag];
+                                  image:image tag:tag];
 }
 
 - (id) init:(NSString *) title
@@ -89,7 +89,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef enum {
-  
+    
     KTDropMenuViewArrowDirectionNone,
     KTDropMenuViewArrowDirectionUp,
     KTDropMenuViewArrowDirectionDown,
@@ -108,7 +108,7 @@ typedef enum {
 }
 
 - (id)init{
-    self = [super initWithFrame:CGRectZero];    
+    self = [super initWithFrame:CGRectZero];
     if(self) {
         self.backgroundColor = [UIColor clearColor];
         self.opaque = YES;
@@ -147,7 +147,7 @@ typedef enum {
     CGFloat kMargin = [KTDropMenu margin];
     
     if (heightPlusArrow < (outerHeight - rectY1)) {
-    
+        
         _arrowDirection = KTDropMenuViewArrowDirectionUp;
         CGPoint point = (CGPoint){
             rectXM - widthHalf,
@@ -161,9 +161,9 @@ typedef enum {
             point.x = outerWidth - contentSize.width - kMargin;
         
         _arrowPosition = rectXM - point.x;
-        //_arrowPosition = MAX(16, MIN(_arrowPosition, contentSize.width - 16));        
+        //_arrowPosition = MAX(16, MIN(_arrowPosition, contentSize.width - 16));
         _contentView.frame = (CGRect){0, [KTDropMenu arrowSize], contentSize};
-                
+        
         self.frame = (CGRect) {
             
             point,
@@ -253,7 +253,7 @@ typedef enum {
             (outerHeight - contentSize.height) * 0.5f,
             contentSize,
         };
-    }    
+    }
 }
 
 - (void)showMenuInView:(UIView *)view fromRect:(CGRect)rect menuItems:(NSArray *)menuItems{
@@ -263,7 +263,7 @@ typedef enum {
     [self addSubview:_contentView];
     
     [self setupFrameInView:view fromRect:rect];
-        
+    
     KTDropMenuOverlay *overlay = [[KTDropMenuOverlay alloc] initWithFrame:view.bounds];
     [overlay addSubview:self];
     [view addSubview:overlay];
@@ -281,15 +281,15 @@ typedef enum {
                      } completion:^(BOOL completed) {
                          _contentView.hidden = NO;
                      }];
-   
+    
 }
 
 - (void)dismissMenu:(BOOL) animated{
     if (self.superview) {
-     
+        
         if (animated) {
             
-            _contentView.hidden = YES;            
+            _contentView.hidden = YES;
             const CGRect toFrame = (CGRect){self.arrowPoint, 1, 1};
             
             [UIView animateWithDuration:0.2
@@ -331,7 +331,7 @@ typedef enum {
     
     if (!_menuItems.count)
         return nil;
- 
+    
     const CGFloat kMinMenuItemHeight = 32.f;
     const CGFloat kMinMenuItemWidth = 32.f;
     CGFloat kMarginX = [KTDropMenu margin] * 2;
@@ -340,22 +340,22 @@ typedef enum {
     UIFont *titleFont = [KTDropMenu titleFont];
     if (!titleFont) titleFont = [UIFont boldSystemFontOfSize:16];
     
-    CGFloat maxImageWidth = 0;    
+    CGFloat maxImageWidth = 0;
     CGFloat maxItemHeight = 0;
     CGFloat maxItemWidth = 0;
     
     for (KTDropMenuItem *menuItem in _menuItems) {
         
-        const CGSize imageSize = menuItem.image.size;        
+        const CGSize imageSize = menuItem.image.size;
         if (imageSize.width > maxImageWidth)
-            maxImageWidth = imageSize.width;        
+            maxImageWidth = imageSize.width;
     }
     
     for (KTDropMenuItem *menuItem in _menuItems) {
-
+        
         const CGSize titleSize = [menuItem.title sizeWithFont:titleFont];
         const CGSize imageSize = menuItem.image.size;
-
+        
         const CGFloat itemHeight = MAX(titleSize.height, imageSize.height) + kMarginY * 2;
         const CGFloat itemWidth = (menuItem.image ? maxImageWidth + kMarginX : 0) + titleSize.width + kMarginX * 4;
         
@@ -365,11 +365,11 @@ typedef enum {
         if (itemWidth > maxItemWidth)
             maxItemWidth = itemWidth;
     }
-       
+    
     maxItemWidth  = MAX(maxItemWidth, kMinMenuItemWidth);
     maxItemHeight = MAX(maxItemHeight, kMinMenuItemHeight);
     maxItemWidth  = MIN(maxItemWidth, 200);
-
+    
     const CGFloat titleX = kMarginX * 2 + (maxImageWidth > 0 ? maxImageWidth + kMarginX : 0);
     const CGFloat titleWidth = maxItemWidth - titleX - kMarginX;
     
@@ -384,22 +384,22 @@ typedef enum {
     CGFloat itemY = kMarginY * 2;
     NSUInteger itemNum = 0;
     
-   // int index= 0 ;
+    // int index= 0 ;
     CGFloat maxViewitemY= itemY ;
-        
+    
     for (KTDropMenuItem *menuItem in _menuItems) {
-                
+        
         const CGRect itemFrame = (CGRect){0, itemY, maxItemWidth, maxItemHeight};
         
         UIView *itemView = [[UIView alloc] initWithFrame:itemFrame];
         itemView.autoresizingMask = UIViewAutoresizingNone;
-        itemView.backgroundColor = [UIColor clearColor];        
+        itemView.backgroundColor = [UIColor clearColor];
         itemView.opaque = NO;
-                
+        
         [contentView addSubview:itemView];
         
         if (menuItem.enabled) {
-        
+            
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.tag = itemNum;
             button.frame = itemView.bounds;
@@ -448,7 +448,7 @@ typedef enum {
             titleLabel.backgroundColor = [UIColor clearColor];
             titleLabel.autoresizingMask = UIViewAutoresizingNone;
             //titleLabel.backgroundColor = [UIColor greenColor];
-            [itemView addSubview:titleLabel];            
+            [itemView addSubview:titleLabel];
         }
         
         if (menuItem.image) {
@@ -479,7 +479,7 @@ typedef enum {
             maxViewitemY = itemY;
         }
         
-    }    
+    }
     
     contentView.frame = (CGRect){0, 0, maxItemWidth, maxViewitemY + kMarginY * 2};
     contentView.contentSize = CGSizeMake(maxItemWidth, itemY + kMarginY * 2);
@@ -528,34 +528,34 @@ typedef enum {
 
 + (UIImage *) selectedImage: (CGSize) size{
     
-  return   [self imageWithColor:[KTDropMenu selectedColor] size:size];
-//    const CGFloat locations[] = {0,1};
-//    const CGFloat components[] = {
-//        0.216, 0.471, 0.871, 1,
-//        0.059, 0.353, 0.839, 1,
-//    };
-//    
-//    return [self gradientImageWithSize:size locations:locations components:components count:2];
+    return   [self imageWithColor:[KTDropMenu selectedColor] size:size];
+    //    const CGFloat locations[] = {0,1};
+    //    const CGFloat components[] = {
+    //        0.216, 0.471, 0.871, 1,
+    //        0.059, 0.353, 0.839, 1,
+    //    };
+    //
+    //    return [self gradientImageWithSize:size locations:locations components:components count:2];
 }
 
 + (UIImage *) gradientLine: (CGSize) size{
     
     
     return   [self imageWithColor:[KTDropMenu splitLineColor] size:size];
-
-//    const CGFloat locations[5] = {0,0.2,0.5,0.8,1};
-//    
-//    const CGFloat R = 0.44f, G = 0.44f, B = 0.44f;
-//
-//    const CGFloat components[20] = {
-//        R,G,B,0.1,
-//        R,G,B,0.4,
-//        R,G,B,0.7,
-//        R,G,B,0.4,
-//        R,G,B,0.1
-//    };
-//    
-   // return [self gradientImageWithSize:size locations:locations components:components count:5];
+    
+    //    const CGFloat locations[5] = {0,0.2,0.5,0.8,1};
+    //
+    //    const CGFloat R = 0.44f, G = 0.44f, B = 0.44f;
+    //
+    //    const CGFloat components[20] = {
+    //        R,G,B,0.1,
+    //        R,G,B,0.4,
+    //        R,G,B,0.7,
+    //        R,G,B,0.4,
+    //        R,G,B,0.1
+    //    };
+    //
+    // return [self gradientImageWithSize:size locations:locations components:components count:5];
 }
 
 + (UIImage *) gradientImageWithSize:(CGSize) size locations:(const CGFloat []) locations components:(const CGFloat []) components count:(NSUInteger)count{
@@ -631,13 +631,14 @@ typedef enum {
         [arrowPath addLineToPoint: (CGPoint){arrowX0, arrowY0}];
         [arrowPath addLineToPoint: (CGPoint){arrowXM, arrowY1}];
         
-        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
+//        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
+        [[UIColor colorWithRed:R0 green:G0 blue:B0 alpha:1] set];
         
         Y1 -= [KTDropMenu arrowSize];
         
     } else if (_arrowDirection == KTDropMenuViewArrowDirectionLeft) {
         
-        const CGFloat arrowYM = _arrowPosition;        
+        const CGFloat arrowYM = _arrowPosition;
         const CGFloat arrowX0 = X0;
         const CGFloat arrowX1 = X0 + [KTDropMenu arrowSize] + kEmbedFix;
         const CGFloat arrowY0 = arrowYM - [KTDropMenu arrowSize];;
@@ -654,7 +655,7 @@ typedef enum {
         
     } else if (_arrowDirection == KTDropMenuViewArrowDirectionRight) {
         
-        const CGFloat arrowYM = _arrowPosition;        
+        const CGFloat arrowYM = _arrowPosition;
         const CGFloat arrowX0 = X1;
         const CGFloat arrowX1 = X1 - [KTDropMenu arrowSize] - kEmbedFix;
         const CGFloat arrowY0 = arrowYM - [KTDropMenu arrowSize];;
@@ -665,24 +666,26 @@ typedef enum {
         [arrowPath addLineToPoint: (CGPoint){arrowX1, arrowY1}];
         [arrowPath addLineToPoint: (CGPoint){arrowX0, arrowYM}];
         
-        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
+//        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
+        [[UIColor colorWithRed:R0 green:G0 blue:B0 alpha:1] set];
         
         X1 -= [KTDropMenu arrowSize];
     }
     
     [arrowPath fill];
-
+    
     // render body
     
     const CGRect bodyFrame = {X0, Y0, X1 - X0, Y1 - Y0};
     
     UIBezierPath *borderPath = [UIBezierPath bezierPathWithRoundedRect:bodyFrame
                                                           cornerRadius:[KTDropMenu cornerRadius]];
-        
+    
     const CGFloat locations[] = {0, 1};
     const CGFloat components[] = {
         R0, G0, B0, 1,
-         R0, G0, B0, 1,
+        R0, G0, B0, 1,
+//        R1, G1, B1, 1,
     };
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -699,7 +702,7 @@ typedef enum {
     
     if (_arrowDirection == KTDropMenuViewArrowDirectionLeft ||
         _arrowDirection == KTDropMenuViewArrowDirectionRight) {
-                
+        
         start = (CGPoint){X0, Y0};
         end = (CGPoint){X1, Y0};
         
@@ -711,7 +714,7 @@ typedef enum {
     
     CGContextDrawLinearGradient(context, gradient, start, end, 0);
     
-    CGGradientRelease(gradient);    
+    CGGradientRelease(gradient);
 }
 
 @end
@@ -754,7 +757,7 @@ static CGFloat gCornerRadius;
 }
 
 - (void) dealloc{
-    if (_observing) {        
+    if (_observing) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
 }
@@ -768,9 +771,9 @@ static CGFloat gCornerRadius;
         [_menuView dismissMenu:NO];
         _menuView = nil;
     }
-
-    if (!_observing) {
     
+    if (!_observing) {
+        
         _observing = YES;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -778,11 +781,11 @@ static CGFloat gCornerRadius;
                                                      name:UIApplicationWillChangeStatusBarOrientationNotification
                                                    object:nil];
     }
-
+    
     
     _menuView = [[KTDropMenuView alloc] init];
     _menuView.delegate = delegate;
-    [_menuView showMenuInView:view fromRect:rect menuItems:menuItems];    
+    [_menuView showMenuInView:view fromRect:rect menuItems:menuItems];
 }
 
 - (void) dismissMenu{

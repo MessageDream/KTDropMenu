@@ -33,7 +33,15 @@
 - (IBAction)button_click:(id)sender {
     KTDropMenuItem *item = [KTDropMenuItem menuItem:@"hahhaha" image:nil tag:nil];
     KTDropMenuItem *item1 = [KTDropMenuItem menuItem:@"hahhcscscaha" image:nil tag:nil];
-    [KTDropMenu showMenuInView:self.view fromView:sender delegate:self menuItems:@[item,item1]];
+    KTDropMenuItem *item2 = [KTDropMenuItem menuItem:@"hahhaha" image:nil tag:nil];
+    KTDropMenuItem *item12 = [KTDropMenuItem menuItem:@"hahhcscscaha" image:nil tag:nil];
+    KTDropMenuItem *item3 = [KTDropMenuItem menuItem:@"hahhaha" image:nil tag:nil];
+    KTDropMenuItem *item4 = [KTDropMenuItem menuItem:@"hahhcscscaha" image:nil tag:nil];
+    KTDropMenuItem *item5 = [KTDropMenuItem menuItem:@"hahhaha" image:nil tag:nil];
+    KTDropMenuItem *item16 = [KTDropMenuItem menuItem:@"hahhcscscaha" image:nil tag:nil];
+    KTDropMenuItem *item7 = [KTDropMenuItem menuItem:@"hahhaha" image:nil tag:nil];
+    KTDropMenuItem *item18 = [KTDropMenuItem menuItem:@"hahhcscscaha" image:nil tag:nil];
+    [KTDropMenu showMenuInView:self.view fromView:sender delegate:self menuItems:@[item,item1,item2,item12,item3,item4,item5,item16,item7,item18]];
 }
 
 @end
