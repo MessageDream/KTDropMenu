@@ -16,6 +16,7 @@
 
 @interface KTDropMenuView : UIView
 @property(nonatomic,weak) id<KTDropMenuDelegate> delegate;
+@property(nonatomic,assign) KTDropMenuStyle style;
 - (void)dismissMenu:(BOOL) animated;
 @end
 
@@ -71,12 +72,9 @@
         _title = title;
         _image = image;
         _tag = tag;
+        _enabled = YES;
     }
     return self;
-}
-
-- (BOOL) enabled{
-    return !self.isSelected;
 }
 
 - (NSString *) description{
@@ -97,6 +95,8 @@ typedef enum {
     KTDropMenuViewArrowDirectionRight,
     
 } KTDropMenuViewArrowDirection;
+
+
 
 @implementation KTDropMenuView {
     
@@ -319,8 +319,16 @@ typedef enum {
     
     UIButton *button = (UIButton *)sender;
     KTDropMenuItem *menuItem = _menuItems[button.tag];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ktDropMenuItemSelected:index:)]) {
-        [self.delegate ktDropMenuItemSelected:menuItem index:button.tag];
+    
+    if (self.style) {
+        for (KTDropMenuItem *item in _menuItems) {
+            item.selected = NO;
+        }
+        menuItem.selected = YES;
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ktDropMenuStyle:ItemSelected:index:)]) {
+        [self.delegate ktDropMenuStyle:self.style ItemSelected:menuItem index:button.tag];
     }
 }
 
@@ -398,7 +406,7 @@ typedef enum {
         
         [contentView addSubview:itemView];
         
-        if (menuItem.enabled) {
+        if ((menuItem.enabled && !self.style) || self.style) {
             
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.tag = itemNum;
@@ -421,7 +429,7 @@ typedef enum {
             
             CGRect titleFrame;
             
-            if (!menuItem.enabled && !menuItem.image) {
+            if (!menuItem.enabled && !menuItem.image && !self.style) {
                 
                 titleFrame = (CGRect){
                     kMarginX * 2,
@@ -460,6 +468,9 @@ typedef enum {
             imageView.contentMode = UIViewContentModeCenter;
             imageView.autoresizingMask = UIViewAutoresizingNone;
             [itemView addSubview:imageView];
+            if (self.style && !menuItem.selected) {
+                imageView.alpha = 0;
+            }
         }
         
         if (itemNum < _menuItems.count - 1) {
@@ -762,7 +773,7 @@ static CGFloat gCornerRadius;
     }
 }
 
-- (void) showMenuInView:(UIView *)view fromRect:(CGRect)rect delegate:(id<KTDropMenuDelegate>)delegate menuItems:(NSArray *)menuItems{
+- (void) showMenuInView:(UIView *)view fromRect:(CGRect)rect delegate:(id<KTDropMenuDelegate>)delegate style:(KTDropMenuStyle)style menuItems:(NSArray *)menuItems{
     NSParameterAssert(view);
     NSParameterAssert(menuItems.count);
     
@@ -785,6 +796,7 @@ static CGFloat gCornerRadius;
     
     _menuView = [[KTDropMenuView alloc] init];
     _menuView.delegate = delegate;
+    _menuView.style = style;
     [_menuView showMenuInView:view fromRect:rect menuItems:menuItems];
 }
 
@@ -806,16 +818,16 @@ static CGFloat gCornerRadius;
     [self dismissMenu];
 }
 
-+ (void) showMenuInView:(UIView *)view fromRect:(CGRect)rect delegate:(id<KTDropMenuDelegate>)delegate menuItems:(NSArray *)menuItems{
-    [[self sharedMenu] showMenuInView:view fromRect:rect delegate:delegate menuItems:menuItems];
++ (void) showMenuInView:(UIView *)view fromRect:(CGRect)rect delegate:(id<KTDropMenuDelegate>)delegate style:(KTDropMenuStyle)style menuItems:(NSArray *)menuItems{
+    [[self sharedMenu] showMenuInView:view fromRect:rect delegate:delegate style:style menuItems:menuItems];
 }
 
-+ (void)showMenuInView:(UIView *)view fromView:(UIView *)fromView delegate:(id<KTDropMenuDelegate>)delegate menuItems:(NSArray *)menuItems{
++ (void)showMenuInView:(UIView *)view fromView:(UIView *)fromView delegate:(id<KTDropMenuDelegate>)delegate style:(KTDropMenuStyle)style menuItems:(NSArray *)menuItems{
     CGRect rect = fromView.frame;
     if (![fromView.superview isEqual:view]) {
         rect = [fromView convertRect:fromView.frame fromView:view];
     }
-    [self showMenuInView:view fromRect:rect delegate:delegate menuItems:menuItems];
+    [self showMenuInView:view fromRect:rect delegate:delegate style:style menuItems:menuItems];
 }
 
 + (void) dismissMenu{

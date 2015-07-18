@@ -18,23 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qm1-Xd-KSC">
-                                <rect key="frame" x="508" y="544" width="46" height="30"/>
+                                <rect key="frame" x="511" y="544" width="43" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="action"/>
                                 <connections>
                                     <action selector="button_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7T4-co-bHs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9N-fB-c9l">
+                                <rect key="frame" x="277" y="20" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="select"/>
+                                <connections>
+                                    <action selector="selectButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nky-3j-wga"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="X9N-fB-c9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4P-aH-1Lx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qm1-Xd-KSC" secondAttribute="bottom" constant="26" id="HTy-Qw-dNA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qm1-Xd-KSC" secondAttribute="trailing" constant="26" id="XN6-YB-6Dq"/>
+                            <constraint firstItem="X9N-fB-c9l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dQE-DB-LL3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="qm1-Xd-KSC" id="UzT-UV-bpR"/>
+                        <outlet property="selectButton" destination="X9N-fB-c9l" id="rDZ-om-Dnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
