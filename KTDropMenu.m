@@ -825,7 +825,7 @@ static CGFloat gCornerRadius;
 + (void)showMenuInView:(UIView *)view fromView:(UIView *)fromView delegate:(id<KTDropMenuDelegate>)delegate style:(KTDropMenuStyle)style menuItems:(NSArray *)menuItems{
     CGRect rect = fromView.frame;
     if (![fromView.superview isEqual:view]) {
-        rect = [fromView convertRect:fromView.frame fromView:view];
+        rect = [fromView convertRect:fromView.frame toView:view];
     }
     [self showMenuInView:view fromRect:rect delegate:delegate style:style menuItems:menuItems];
 }
